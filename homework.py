@@ -27,9 +27,7 @@ for i in range(4):
     t.right(90)
 t.end_fill()
 
-
 t.goto(0, 0)
-
 
 # one carrot:
 def draw_carrot():
@@ -54,29 +52,13 @@ def draw_carrot():
     t.setheading(0)
     t.pensize(1)
 
-# this is one carrot
-
-draw_carrot()
-
-
 # hint: you'll need this function
 def teleport(x,y):
     t.penup()
-    t.goto(x, y)
+    t.goto(x,y)
     t.pendown()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for i in range(10):
+    teleport(random.randint(-500, 500), random.randint(-250, 250))
+    draw_carrot()
+screen.exitonclick()
